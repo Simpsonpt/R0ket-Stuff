@@ -1,7 +1,7 @@
 /* CCC MSN 0.1b @ CCC 2011 Germany
  * Developers:
  *  - Simpson
- * 	- 0xCC
+ *  - 0xCC
  * 
  * Base Codes:
  *  - sign.c (For Mesh Communication)

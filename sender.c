@@ -21,15 +21,21 @@ void ram(void)
 	char inputed[20];
     for(int i=0; i<20; i++) 
 		inputed[i] = 0;
-    input("Write msg:", inputed, ' ', '}', 20);
+    input("Write msg:",inputed,' ','}',20);
     strcpy(tx_msg, inputed);
     while(getInputRaw() != BTN_UP)
-    {
+    {       
         lcdClear();
-        lcdPrintln("Sending...");
-        lcdPrintln(tx_msg);
-        lcdPrintln("UP to Exit!");
-        lcdRefresh();
+		lcdPrintln("");
+		lcdPrintln("Sender 0.2");
+		lcdPrintln("---------------");
+		lcdPrintln(tx_msg);        
+		lcdPrintln("");        
+		lcdPrintln("Press UP Exit");
+		lcdPrintln("");
+		lcdPrintln("_______________");
+		lcdPrintln("Sending...");
+		lcdRefresh();
         _mesh_sendloop();
     }
 }

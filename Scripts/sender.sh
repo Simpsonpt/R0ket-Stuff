@@ -1,10 +1,8 @@
 #!/bin/sh
+#Build for simulator and final c0d
+#Must be on (r0ket/firmware/l0dable)
+#Usage sh sender.sh l0dable_name
 cd ..
-make APP=l0dable LAPP=msn
+make APP=l0dable LAPP=$1
 cd l0dable
-make msn.c0d
-
-cd ..
-make APP=l0dable LAPP=sender
-cd l0dable
-make sender.c0d
+make $1.c0d
